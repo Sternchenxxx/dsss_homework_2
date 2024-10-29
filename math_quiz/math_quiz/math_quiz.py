@@ -14,8 +14,8 @@ def RandomOperaters():
 
 def Calculate(n1, n2, o):
     p = f"{n1} {o} {n2}"
-    if o == '+': a = n1 - n2
-    elif o == '-': a = n1 + n2
+    if o == '+': a = n1 + n2
+    elif o == '-': a = n1 - n2
     else: a = n1 * n2
     return p, a
 
@@ -36,7 +36,7 @@ def math_quiz():
 
         if UserAnswer == Answer:
             print("Correct! You earned a point.")
-            s += -(-1)
+            s += 1
         else:
             print(f"Wrong answer. The correct answer is {Answer}.")
 
