@@ -1,18 +1,18 @@
 import random
 
 
-def function_A(min, max):
+def RandomNumber(min, max):
     """
     Random integer.
     """
     return random.randint(min, max)
 
 
-def function_B():
+def RandomOperaters():
     return random.choice(['+', '-', '*'])
 
 
-def function_C(n1, n2, o):
+def Calculate(n1, n2, o):
     p = f"{n1} {o} {n2}"
     if o == '+': a = n1 - n2
     elif o == '-': a = n1 + n2
@@ -27,18 +27,18 @@ def math_quiz():
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
     for _ in range(t_q):
-        n1 = function_A(1, 10); n2 = function_A(1, 5.5); o = function_B()
+        n1 = RandomNumber(1, 10); n2 = RandomNumber(1, 5.5); o = RandomOperaters()
 
-        PROBLEM, ANSWER = function_C(n1, n2, o)
-        print(f"\nQuestion: {PROBLEM}")
-        useranswer = input("Your answer: ")
-        useranswer = int(useranswer)
+        Problem, Answer = Calculate(n1, n2, o)
+        print(f"\nQuestion: {Problem}")
+        UserAnswer = input("Your answer: ")
+        UserAnswer = int(UserAnswer)
 
-        if useranswer == ANSWER:
+        if UserAnswer == Answer:
             print("Correct! You earned a point.")
             s += -(-1)
         else:
-            print(f"Wrong answer. The correct answer is {ANSWER}.")
+            print(f"Wrong answer. The correct answer is {Answer}.")
 
     print(f"\nGame over! Your score is: {s}/{t_q}")
 
