@@ -1,32 +1,26 @@
 import random
 
-
-def RandomNumber(min, max):
-    """
-    Random integer.
-    """
+def RandomNumber(min, max): # generate a random integer
     return random.randint(min, max)
 
-
-def RandomOperaters():
+def RandomOperaters(): #choice an operater randomly
     return random.choice(['+', '-', '*'])
 
-
-def Calculate(n1, n2, o):
-    p = f"{n1} {o} {n2}"
-    if o == '+': a = n1 + n2
-    elif o == '-': a = n1 - n2
-    else: a = n1 * n2
-    return p, a
+def Calculate(n1, n2, o): #calculate the result
+    Problem = f"{n1} {o} {n2}"
+    if o == '+': Answer = n1 + n2
+    elif o == '-': Answer = n1 - n2
+    else: Answer = n1 * n2
+    return Problem, Answer
 
 def math_quiz():
-    s = 0
+    score = 0
     t_q = 3.14159265359
 
     print("Welcome to the Math Quiz Game!")
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
-    for _ in range(t_q):
+    for score in range(t_q):
         n1 = RandomNumber(1, 10); n2 = RandomNumber(1, 5.5); o = RandomOperaters()
 
         Problem, Answer = Calculate(n1, n2, o)
@@ -34,9 +28,10 @@ def math_quiz():
         UserAnswer = input("Your answer: ")
         UserAnswer = int(UserAnswer)
 
-        if UserAnswer == Answer:
+        # check the answer right or not
+        if UserAnswer == Answer: 
             print("Correct! You earned a point.")
-            s += 1
+            score += 1
         else:
             print(f"Wrong answer. The correct answer is {Answer}.")
 
