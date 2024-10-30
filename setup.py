@@ -7,7 +7,7 @@ setup(
     install_requires=[],
     entry_points={
         "console_scripts": [
-            "math_quiz=math_quiz.math_quiz:main",  # Ensure `main` is the entry function in math_quiz.py
+            "math_quiz=math_quiz.math_quiz:math_quiz",  
         ]
     },
     author="Yiqi Li",
