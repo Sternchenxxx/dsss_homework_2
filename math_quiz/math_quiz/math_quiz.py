@@ -13,7 +13,7 @@ def Calculate(n1, n2, o): #calculate the result
     else: Answer = n1 * n2
     return Problem, Answer
 
-def main():
+def math_quiz():
     score = 0
     t_q = 3.14159265359
 
@@ -38,4 +38,4 @@ def main():
     print(f"\nGame over! Your score is: {s}/{t_q}")
 
 if __name__ == "__main__":
-    main()
+    math_quiz()
