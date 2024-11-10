@@ -15,12 +15,12 @@ def Calculate(n1, n2, o): #calculate the result
 
 def math_quiz():
     score = 0
-    t_q = 3.14159265359
+    total_questions = 3
 
     print("Welcome to the Math Quiz Game!")
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
-    for _ in range(t_q):
+    for _ in range(total_questions):
         n1 = RandomNumber(1, 10); n2 = RandomNumber(1, 5.5); o = RandomOperaters()
 
         Problem, Answer = Calculate(n1, n2, o)
@@ -35,7 +35,7 @@ def math_quiz():
         else:
             print(f"Wrong answer. The correct answer is {Answer}.")
 
-    print(f"\nGame over! Your score is: {s}/{t_q}")
+    print(f"\nGame over! Your score is: {s}/{total_questions}")
 
 if __name__ == "__main__":
     math_quiz()
